@@ -1,4 +1,4 @@
-import time
+import time,json
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -10,7 +10,8 @@ import TimeSchedule_API.Time_Scheduler
 options = webdriver.ChromeOptions()
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
 web = webdriver.Chrome(options=options)
-
+with open('momo_pwd.json', 'r') as f:
+    jsonFile = json.load(f)
 
 # options.use_chromium = True
 prefs = {
@@ -24,8 +25,8 @@ options.add_experimental_option('prefs', prefs)
 options.add_argument("disable-infobars") 
 web.maximize_window() 
 web.get("https://m.momoshop.com.tw/mymomo/login.momo") # 到登入頁面
-web.find_element(By.ID, 'memId').send_keys('') # 輸入帳號
-web.find_element(By.ID,'passwd').send_keys('') # 輸入密碼
+web.find_element(By.ID, 'memId').send_keys(jsonFile["accton"]) # 輸入帳號
+web.find_element(By.ID,'passwd').send_keys(jsonFile["pwd"]) # 輸入密碼 
 web.find_element(By.CLASS_NAME, 'login').click()
 TimeSchedule_API.Time_Scheduler.TimeSchedule()
 
@@ -49,7 +50,7 @@ while 1:
         web.find_element(By.CLASS_NAME,'recentlyCardNoBtn').click()  
         web.find_element(By.XPATH,'//*[@id="notice705"]/div[2]/div[1]/div[1]/table/tbody/tr/td[1]/label/span').click()
         web.find_element(By.CLASS_NAME,'recentlyCardNoselectBox_confirm').click() 
-        web.find_element(By.XPATH,'//*[@id="cardCVV"]').send_keys('')
+        web.find_element(By.ID,'cardNo_4').send_keys(jsonFile["ccv"])
         web.find_element(By.ID,'orderSave').click()
         print ('已經購買!')
         print('執行時間:%f秒' %(endTime-startTime))
