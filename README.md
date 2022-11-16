@@ -20,7 +20,7 @@ python -m pip install -r requirements.txt (輸入虛擬套件)
 安裝套件 email,http,json,select,subprocess,time,datetime, argparse ,tkinter,wsgiref,selenium
 
 參考文件 https://github.com/powei-lin/family_mart_goods_check/blob/main/main.py
-
+安裝exe https://chromedriver.chromium.org/downloads
 
 ------------------------------------------------------------------------------------------------
 
