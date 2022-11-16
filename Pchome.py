@@ -23,22 +23,18 @@ options.add_experimental_option('prefs', prefs)
 options.add_argument("disable-infobars") 
 web.maximize_window() 
 
-# TimeSchedule.Time_Scheduler.TimeSchedule()
-sleep(4)
-# web.get("https://m.momoshop.com.tw/mymomo/login.momo") # 到登入頁面
 
-# web.find_element(By.ID, 'memId').send_keys('') # 輸入帳號
-# web.find_element(By.ID,'passwd').send_keys('') # 輸入密碼
-# web.find_element(By.CLASS_NAME, 'login').click()
-# web.get("https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10595871&str_category_code=3801800025&mdiv=3899900000-bt_2_092_01-bt_2_092_01_e16&ctype=B&sourcePageType=4")
+sleep(4)
 web.get('https://ecvip.pchome.com.tw/login/v3/login.htm?rurl=https%3A%2F%2Fshopping.pchome.com.tw%2F')
 web.find_element(By.ID, 'loginAcc').send_keys('allen.zhou@pixis.com.tw') # 輸入帳號
 sleep(2)
 web.find_element(By.ID,'loginPwd').send_keys('123456') # 輸入密碼
 sleep(2)
 web.find_element(By.ID, 'btnLogin').click()
+TimeSchedule_API.Time_Scheduler.TimeSchedule()
 
 web.get('https://24h.pchome.com.tw/prod/DRADJ4-A900FMNHK?fq=/S/DRADI7')
+
 
 while 1:
         try:

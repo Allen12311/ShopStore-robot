@@ -23,14 +23,12 @@ prefs = {
 options.add_experimental_option('prefs', prefs) 
 options.add_argument("disable-infobars") 
 web.maximize_window() 
-
-
 web.get("https://m.momoshop.com.tw/mymomo/login.momo") # 到登入頁面
 web.find_element(By.ID, 'memId').send_keys('') # 輸入帳號
 web.find_element(By.ID,'passwd').send_keys('') # 輸入密碼
 web.find_element(By.CLASS_NAME, 'login').click()
-TimeSchedule.Time_Scheduler.TimeSchedule()
-# web.get("https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10595871&str_category_code=3801800025&mdiv=3899900000-bt_2_092_01-bt_2_092_01_e16&ctype=B&sourcePageType=4")
+TimeSchedule_API.Time_Scheduler.TimeSchedule()
+
 web.get('https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=9914113&str_category_code=3801800020&sourcePageType=4')
 time.sleep(1)
 
