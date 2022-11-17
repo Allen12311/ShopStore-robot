@@ -11,7 +11,10 @@ from selenium.webdriver.support import expected_conditions as EC
 import TimeSchedule_API.Time_Scheduler
 options = webdriver.ChromeOptions()
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
+
 web = webdriver.Chrome(options=options)
+with open(r'C:\Users\allen\CSV\ShopStore-robot\momo_pwd.json', 'r') as f:
+    jsonFile = json.load(f)
 prefs = {
     'profile.default_content_setting_values':
         {
@@ -26,9 +29,9 @@ web.maximize_window()
 
 sleep(4)
 web.get('https://ecvip.pchome.com.tw/login/v3/login.htm?rurl=https%3A%2F%2Fshopping.pchome.com.tw%2F')
-web.find_element(By.ID, 'loginAcc').send_keys('allen.zhou@pixis.com.tw') # 輸入帳號
+web.find_element(By.ID, 'loginAcc').send_keys(jsonFile["accton"]) # 輸入帳號
 sleep(2)
-web.find_element(By.ID,'loginPwd').send_keys('123456') # 輸入密碼
+web.find_element(By.ID,'loginPwd').send_keys(jsonFile["pwd"]) # 輸入密碼
 sleep(2)
 web.find_element(By.ID, 'btnLogin').click()
 TimeSchedule_API.Time_Scheduler.TimeSchedule()
