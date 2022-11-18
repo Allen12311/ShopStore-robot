@@ -1,5 +1,3 @@
-from email import header
-from http import cookies
 import json
 import select ,subprocess,time,datetime, argparse
 from time import sleep
@@ -9,21 +7,24 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import TimeSchedule_API.Time_Scheduler
-options = webdriver.ChromeOptions()
-options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
-web = webdriver.Chrome(options=options)
-with open(r'C:\Users\allen\CSV\ShopStore-robot\momo_pwd.json', 'r') as f:
-    jsonFile = json.load(f)
 prefs = {
     'profile.default_content_setting_values':
         {
             'notifications': 2
         }
 }
-
+options = webdriver.ChromeOptions()
+options.page_load_strategy = 'eager'
 options.add_experimental_option('prefs', prefs) 
-options.add_argument("disable-infobars") 
+options.add_argument('disable-infobars') 
+
+
+web = webdriver.Chrome(options=options)
+with open(r'C:\Users\allen\CSV\ShopStore-robot\Pchome_pwd.json', 'r') as f:
+    jsonFile = json.load(f)
+
+# options.add_argument('blink-settings=imagesEnabled=false') 
 web.maximize_window() 
 
 
@@ -32,19 +33,21 @@ web.get('https://ecvip.pchome.com.tw/login/v3/login.htm?rurl=https%3A%2F%2Fshopp
 web.find_element(By.ID, 'loginAcc').send_keys(jsonFile["accton"]) # 輸入帳號
 sleep(2)
 web.find_element(By.ID,'loginPwd').send_keys(jsonFile["pwd"]) # 輸入密碼
-sleep(2)
 web.find_element(By.ID, 'btnLogin').click()
+time.sleep(2)
 TimeSchedule_API.Time_Scheduler.TimeSchedule()
-
 web.get('https://24h.pchome.com.tw/prod/DRADJ4-A900FMNHK?fq=/S/DRADI7')
 
 
 while 1:
         try:
-            buy = WebDriverWait(web, 1, 00.5).until(EC.presence_of_element_located((By.CSS_SELECTOR,'//*[@id="ButtonContainer"]/button'))) # 顯性等待
-        # web.find_element(By.CLASS_NAME,'buynow').click() # 偵測到可以購買按鈕就點擊按鈕 
-            print ('可以購買!')
+            buy = WebDriverWait(web, 1, 00.5).until(EC.presence_of_element_located((By.XPATH,'//*[@id="ButtonContainer"]/button'))) # 顯性等待
             web.find_element(By.XPATH,'//*[@id="ButtonContainer"]/button').click()
+            print ('可以購買!')
+            web.get("https://ecssl.pchome.com.tw/sys/cflow/fsindex/BigCar/BIGCAR/ItemList")  #直接前往購物車
+            print("前往結帳")
+
+            # web.find_element(By.XPATH,'//*[@id="ButtonContainer"]/button').click()
             time.sleep(0.005)
             web.find_element(By.ID,'a_cod').click()
             time.sleep(0.005)
