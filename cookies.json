@@ -1,0 +1,247 @@
+[
+    {
+        "domain": ".104.com.tw",
+        "expiry": 1703291784,
+        "httpOnly": false,
+        "name": "lunp",
+        "path": "/",
+        "secure": false,
+        "value": "5106716112566"
+    },
+    {
+        "domain": ".104.com.tw",
+        "expiry": 1703291784,
+        "httpOnly": false,
+        "name": "luauid",
+        "path": "/",
+        "secure": false,
+        "value": "1664266035"
+    },
+    {
+        "domain": ".104.com.tw",
+        "expiry": 1703291784,
+        "httpOnly": false,
+        "name": "lup",
+        "path": "/",
+        "secure": false,
+        "value": "1664266035.5106716112566.5106716112566.1.4640712161167"
+    },
+    {
+        "domain": "pro.104.com.tw",
+        "httpOnly": false,
+        "name": "_hjCachedUserAttributes",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "eyJhdHRyaWJ1dGVzIjp7ImNpZCI6IjExNTc1OCIsInBpZCI6IjE1ODE0MjAzIiwidGF4SWQiOiI1MjQ3NDk1NyJ9LCJ1c2VySWQiOm51bGx9"
+    },
+    {
+        "domain": "pro.104.com.tw",
+        "httpOnly": true,
+        "name": "hrm.connect.sid",
+        "path": "/",
+        "secure": false,
+        "value": "s%3A2TClrUOB1ZR8AiuONeJyiN7n1bah_CGc.V%2BasKKvJKtl9kQDTS77NDnY5ua2Hvvbfu9aAIz5nShg"
+    },
+    {
+        "domain": ".104.com.tw",
+        "expiry": 1668733624,
+        "httpOnly": false,
+        "name": "_hjAbsoluteSessionInProgress",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "0"
+    },
+    {
+        "domain": ".104.com.tw",
+        "expiry": 1668733624,
+        "httpOnly": false,
+        "name": "_hjSession_642678",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "eyJpZCI6IjM1MDU5MzA1LWU5OWItNDY0YS1iN2E5LThiZTRmMmMwOWNjOSIsImNyZWF0ZWQiOjE2Njg3MzE3ODQ3NjYsImluU2FtcGxlIjpmYWxzZX0="
+    },
+    {
+        "domain": "pro.104.com.tw",
+        "expiry": 1671323782,
+        "httpOnly": true,
+        "name": "PID",
+        "path": "/",
+        "secure": true,
+        "value": "a4a8881fab4f1abd61cea42a53c54013"
+    },
+    {
+        "domain": "pro.104.com.tw",
+        "expiry": 1668731964,
+        "httpOnly": false,
+        "name": "_hjIncludedInSessionSample",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "0"
+    },
+    {
+        "domain": ".104.com.tw",
+        "expiry": 1703291782,
+        "httpOnly": false,
+        "name": "ACUD",
+        "path": "/",
+        "secure": true,
+        "value": "0c5db748-344a-4492-b56a-5904773ba9c8"
+    },
+    {
+        "domain": ".104.com.tw",
+        "expiry": 1668733624,
+        "httpOnly": false,
+        "name": "_hjFirstSeen",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "1"
+    },
+    {
+        "domain": "pro.104.com.tw",
+        "expiry": 1669336584,
+        "httpOnly": false,
+        "name": "AWSALB",
+        "path": "/",
+        "secure": false,
+        "value": "MXjjN5wNNbGAaVOp00/PYW0/D1JHkKivLDTY/VttQ7X/PG/gNGXzTaiUJTI9fIxmbwGIGmEUIX7zMtpx6mCAixZHZwTq3r6KQjdYHs/f76uZ2BH1JySekmTZstc0"
+    },
+    {
+        "domain": ".104.com.tw",
+        "expiry": 1703291783,
+        "httpOnly": false,
+        "name": "_ga_FJWMQR9J2K",
+        "path": "/",
+        "secure": false,
+        "value": "GS1.1.1668731733.1.1.1668731783.10.0.0"
+    },
+    {
+        "domain": ".104.com.tw",
+        "expiry": 1703291783,
+        "httpOnly": false,
+        "name": "_ga_W9X1GB1SVR",
+        "path": "/",
+        "secure": false,
+        "value": "GS1.1.1668731733.1.1.1668731783.10.0.0"
+    },
+    {
+        "domain": ".104.com.tw",
+        "expiry": 1700267784,
+        "httpOnly": false,
+        "name": "_hjSessionUser_642678",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "eyJpZCI6ImJiYmU4NjY0LWI1NTAtNWJmNS1iYmNhLTljNGM1MDA2MDBiZSIsImNyZWF0ZWQiOjE2Njg3MzE3ODQ2MTUsImV4aXN0aW5nIjpmYWxzZX0="
+    },
+    {
+        "domain": ".104.com.tw",
+        "expiry": 1703291784,
+        "httpOnly": false,
+        "name": "_ga",
+        "path": "/",
+        "secure": false,
+        "value": "GA1.3.1274337366.1668731733"
+    },
+    {
+        "domain": ".104.com.tw",
+        "httpOnly": false,
+        "name": "TS01f8a99d",
+        "path": "/",
+        "secure": false,
+        "value": "01180e452df32dcd7bbc7a762c801e073e9918443e2dcfd0b7f8d84550ff4c590d27eaac91d87283319e618ce5bab84ed91a08f0f6f8223f2af1de19f104b60ca8908b099a9ca85f10e2e16223c79db87bc254019a377c9594634f01ff404bfe2901081aec3ca25b78f166c021ce64077a0413a621"
+    },
+    {
+        "domain": "pro.104.com.tw",
+        "expiry": 1668760583,
+        "httpOnly": true,
+        "name": "bs-hrm",
+        "path": "/",
+        "secure": true,
+        "value": "1ab1b740-a74a-46aa-sdfd5df4w5"
+    },
+    {
+        "domain": ".104.com.tw",
+        "expiry": 1671323782,
+        "httpOnly": false,
+        "name": "EPKB",
+        "path": "/",
+        "secure": true,
+        "value": "1a2ee9b626eb60ecbdfbc6b7b2f8b21378c0007555fa76d33d428f5668328daf1"
+    },
+    {
+        "domain": "pro.104.com.tw",
+        "expiry": 1668760583,
+        "httpOnly": true,
+        "name": "BS",
+        "path": "/",
+        "secure": true,
+        "value": "1ab1b740-a74a-46aa-sdfd5df4w5"
+    },
+    {
+        "domain": ".104.com.tw",
+        "expiry": 1671323782,
+        "httpOnly": false,
+        "name": "AC_B",
+        "path": "/",
+        "secure": true,
+        "value": "WyJwcm8iXQ"
+    },
+    {
+        "domain": ".104.com.tw",
+        "httpOnly": false,
+        "name": "dtCookie",
+        "path": "/",
+        "secure": false,
+        "value": "v_4_srv_4_sn_D43E39FFCC387CB66656E00D1001F7EE_perc_100000_ol_0_mul_1_app-3Aea7c4b59f27d43eb_0"
+    },
+    {
+        "domain": "pro.104.com.tw",
+        "expiry": 1671323782,
+        "httpOnly": true,
+        "name": "MDMKEY",
+        "path": "/",
+        "secure": true,
+        "value": "fcf2aedf0daabd0f31235af65cc98916"
+    },
+    {
+        "domain": ".104.com.tw",
+        "expiry": 1703291783,
+        "httpOnly": false,
+        "name": "_ga_EK43MBJWX0",
+        "path": "/",
+        "secure": false,
+        "value": "GS1.1.1668731733.1.1.1668731783.10.0.0"
+    },
+    {
+        "domain": "pro.104.com.tw",
+        "expiry": 1671323783,
+        "httpOnly": true,
+        "name": "connect.sid",
+        "path": "/",
+        "secure": false,
+        "value": "s%3A115758%3A15814203%3A75f1acaf-df95-49ee-be1f-b2a0cb032d36.nIZoCF2jBfWr5XqmSaVBpATBb56kAWp6ewmz6LyZ9k8"
+    },
+    {
+        "domain": "pro.104.com.tw",
+        "expiry": 1671323782,
+        "httpOnly": true,
+        "name": "CID",
+        "path": "/",
+        "secure": true,
+        "value": "f4b93211308cce21e82dfb16671c1070"
+    },
+    {
+        "domain": ".104.com.tw",
+        "expiry": 1668818184,
+        "httpOnly": false,
+        "name": "_gid",
+        "path": "/",
+        "secure": false,
+        "value": "GA1.3.534710740.1668731733"
+    }
+]
