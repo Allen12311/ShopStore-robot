@@ -28,6 +28,7 @@ with open(r'C:\Users\allen\CSV\ShopStore-robot\Pchome_pwd.json', 'r') as f:
 web.maximize_window() 
 
 
+
 sleep(4)
 web.get('https://ecvip.pchome.com.tw/login/v3/login.htm?rurl=https%3A%2F%2Fshopping.pchome.com.tw%2F')
 web.find_element(By.ID, 'loginAcc').send_keys(jsonFile["accton"]) # 輸入帳號
