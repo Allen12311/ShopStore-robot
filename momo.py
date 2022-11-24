@@ -7,9 +7,8 @@ from selenium.webdriver.support import expected_conditions as EC
 import TimeSchedule_API.Time_Scheduler
 options = webdriver.ChromeOptions()
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
-
 web = webdriver.Chrome(options=options)
-with open(r'C:\Users\allen\CSV\ShopStore-robot\momo_pwd.json', 'r') as f:
+with open('momo_pwd.json', 'r') as f:
     jsonFile = json.load(f)
 # options.use_chromium = True
 prefs = {

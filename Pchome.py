@@ -7,25 +7,27 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import TimeSchedule_API.Time_Scheduler
-
+options = webdriver.ChromeOptions()
+options.add_experimental_option('excludeSwitches', ['enable-automation'])
+# options.add_experimental_option('excludeSwitches', ['enable-logging'])
+options.add_experimental_option('useAutomationExtension', False)
+# options.add_argument("disable-infobars") 
+options.page_load_strategy = 'eager'
+web = webdriver.Chrome(options=options)
 prefs = {
     'profile.default_content_setting_values':
         {
             'notifications': 2
         }
 }
-options = webdriver.ChromeOptions()
-options.page_load_strategy = 'eager'
 options.add_experimental_option('prefs', prefs) 
-options.add_argument('disable-infobars') 
+web.maximize_window() 
 
-
-web = webdriver.Chrome(options=options)
-with open(r'C:\Users\allen\CSV\ShopStore-robot\Pchome_pwd.json', 'r') as f:
+with open('Pchome_pwd.json', 'r') as f:
     jsonFile = json.load(f)
 
 # options.add_argument('blink-settings=imagesEnabled=false') 
-web.maximize_window() 
+
 
 
 
