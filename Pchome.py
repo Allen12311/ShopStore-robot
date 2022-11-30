@@ -11,7 +11,7 @@ import TimeSchedule_API.Time_Scheduler
 # from webdriver_manager.chrome import ChromeDriverManager
 # from selenium.webdriver.chrome.service import Service
 # driver_path=ChromeDriverManager(path = r"檔案路徑").install() #下載新版chromedriver，並儲存回指定路徑
-# web = webdriver.Chrome(service=Service(driver_path)) 
+
 URL='https://24h.pchome.com.tw/prod/DDBF0C-A9005132Y'  #商品連結
 
 options = webdriver.ChromeOptions()
@@ -22,7 +22,7 @@ options.add_experimental_option('useAutomationExtension', False)
 options.page_load_strategy = 'eager'
 # options.add_argument("--headless")  # 不開啟實體瀏覽器背景執行
 
-web = webdriver.Chrome(options=options)
+web = webdriver.Chrome(executable_path='chromedriver.exe',options=options)
 
 prefs = {
     'profile.default_content_setting_values':
