@@ -7,6 +7,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support import select
+import TimeSchedule_API.Time_Scheduler
 # from webdriver_manager.chrome import ChromeDriverManager
 # from selenium.webdriver.chrome.service import Service
 # driver_path=ChromeDriverManager(path = r"檔案路徑").install() #下載新版chromedriver，並儲存回指定路徑
@@ -45,6 +46,7 @@ web.find_element(By.ID,'loginPwd').send_keys(jsonFile["pwd"]) # 輸入密碼
 time.sleep(1)
 web.find_element(By.ID, 'btnLogin').click()
 time.sleep(4)
+TimeSchedule_API.Time_Scheduler.TimeSchedule()
 
 web.get(URL)
 
