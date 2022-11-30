@@ -45,7 +45,7 @@ sleep(1)
 web.find_element(By.ID,'loginPwd').send_keys(jsonFile["pwd"]) # 輸入密碼
 time.sleep(1)
 web.find_element(By.ID, 'btnLogin').click()
-time.sleep(4)
+time.sleep(2)
 TimeSchedule_API.Time_Scheduler.TimeSchedule()
 
 web.get(URL)
@@ -56,10 +56,8 @@ while 1:
             buy = WebDriverWait(web, 1, 00.5).until(EC.presence_of_element_located((By.XPATH,'//*[@id="ButtonContainer"]/button'))) # 顯性等待
             web.find_element(By.XPATH,'//*[@id="ButtonContainer"]/button').click()
             print ('可以購買!')
-            sleep(3)
             web.get("https://ecssl.pchome.com.tw/sys/cflow/fsindex/BigCar/BIGCAR/ItemList")  #直接前往購物車
             print("前往結帳")
-            sleep(4)
 
             """
             信用卡 付款
@@ -68,6 +66,10 @@ while 1:
             # button = web.find_element(By.XPATH, #按下'一次付清'按鈕
             # "//li[@class='CC']/a[@class='ui-btn']")
             # web.execute_script("arguments[0].click();", button)
+            """
+            信用卡 付款
+            """
+            
             # sleep(2)
             # web.find_element(By.ID,'BuyerName').send_keys(jsonFile["Name"]) #姓名
             # web.find_element(By.ID,'BuyerSSN').send_keys(jsonFile["SSN"]) #身分證
@@ -91,11 +93,12 @@ while 1:
             # AddrRegion.select_by_value('115')
             # web.find_element(By.ID,'BuyerAddr').send_keys(jsonFile["BuyerAddr"]) #詳細地址
 
-
-            """貨到付款購買資料 """
             print('貨到付款')
+            time.sleep(2)
             web.find_element(By.ID,'a_cod').click() #貨到付款
             time.sleep(2)
+            """貨到付款購買資料 """
+
             web.find_element(By.ID,'BuyerName').send_keys(jsonFile["Name"]) 
             web.find_element(By.ID,'BuyerMobile').send_keys(jsonFile["Mobile"])
             classification =web.find_element(By.ID ,'BuyerAddrCity')
@@ -111,8 +114,10 @@ while 1:
             web.find_element(By.ID,'syncData').click()#同步付款資料
             web.find_element(By.XPATH,'//*[@id="frmUserInfo"]/dl[4]/dd[2]/div[1]/div[2]/label/input').click() #選取電子發票類型
             web.find_element(By.ID,'addContact').click() # 按下加入通訊錄(加過可註解)  
-            WebDriverWait(web, 20).until(expected_conditions.element_to_be_clickable((By.XPATH, "//input[@name='chk_agree']")))  # 選取同意按鈕
-            web.find_element(By.XPATH,"//input[@name='chk_agree']").click()     
+            WebDriverWait(web, 20).until(expected_conditions.element_to_be_clickable((By.XPATH, "//input[@name='chk_agree']")))  
+            web.find_element(By.XPATH,"//input[@name='chk_agree']").click()  # 選取同意按鈕  
+            
+            
             web.find_element(By.ID,'btnSubmit').click() # 按下確認紐
             print ('可以購買!')
 
